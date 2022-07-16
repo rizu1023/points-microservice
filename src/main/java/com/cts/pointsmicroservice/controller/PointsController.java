@@ -52,7 +52,8 @@ public class PointsController {
 	 * @throws MicroserviceException
 	 * @throws InvalidUserException
 	 */
-	@CrossOrigin(origins = "http://localhost:4200")
+// 	@CrossOrigin(origins = "http://localhost:4200")
+	@CrossOrigin(origins = "http://pod5-mfpe.s3-website-us-west-2.amazonaws.com")
 	@PostMapping("/refreshpointsbyemp/{id}")
 	public ResponseEntity<?> refreshPointsByEmpId(@RequestHeader(name = "Authorization") String token,
 			@PathVariable("id") int id) throws InvalidUserException, MicroserviceException {
